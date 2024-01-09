@@ -12,8 +12,13 @@ def hello_world():
 def say_bye():
     return 'Bye'
 
+@app.route('/<name>/<int:number>')
+def greet(name,number):
+    return f"Hello {name}, are you {number} "
+
+
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True)
 
 
 
